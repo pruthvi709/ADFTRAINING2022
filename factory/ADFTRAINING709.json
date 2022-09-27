@@ -1,0 +1,9 @@
+{
+	"name": "ADFTRAINING709",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c8995ec9-58f6-4ae2-8d8a-2c03388af7be",
+		"tenantId": "c36d1ed8-8c67-43fa-a528-32a50561814c"
+	}
+}
