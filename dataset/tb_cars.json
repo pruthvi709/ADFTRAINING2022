@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "tb_cars",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_SQL_EDW",
