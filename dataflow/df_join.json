@@ -57,7 +57,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> MoviesDB",
 				"Movies, MoviesDB join(Movies@title == MoviesDB@title,",
-				"     joinType:'left',",
+				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> joinmovies",
