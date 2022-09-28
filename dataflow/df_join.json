@@ -13,21 +13,19 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "MoviesClean"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
+				"parameters{",
+				"     parameter1 as string",
+				"}",
 				"source(output(",
 				"          movieId as string,",
 				"          title as string,",
 				"          genres as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> Movies",
-				"Movies derive(titleNew = toString((left(title,length(title)-6)))) ~> MoviesClean"
+				"     validateSchema: true,",
+				"     ignoreNoFilesFound: false) ~> Movies"
 			]
 		}
 	}
