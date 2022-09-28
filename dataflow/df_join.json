@@ -35,7 +35,7 @@
 				"          genres as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: true,",
+				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Movies",
 				"source(output(",
 				"          movie as string,",
