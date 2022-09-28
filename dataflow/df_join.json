@@ -1,0 +1,20 @@
+{
+	"name": "df_join",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "Movies",
+					"description": "Import data from Movies_DS1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> Movies"
+			]
+		}
+	}
+}
