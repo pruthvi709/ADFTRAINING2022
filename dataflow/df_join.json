@@ -25,7 +25,7 @@
 						"referenceName": "MoviesOpCSV",
 						"type": "DatasetReference"
 					},
-					"name": "moviesop",
+					"name": "moviesopcsv",
 					"rejectedDataLinkedService": {
 						"referenceName": "LS_BLOB_TRAINING709",
 						"type": "LinkedServiceReference"
@@ -83,7 +83,7 @@
 				"     truncate: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> moviesop"
+				"     partitionBy('hash', 1)) ~> moviesopcsv"
 			]
 		}
 	}
