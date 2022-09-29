@@ -1,0 +1,44 @@
+{
+	"name": "df_agg_derive",
+	"properties": {
+		"description": "data flow created for aggregation",
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Movies_V1",
+						"type": "DatasetReference"
+					},
+					"name": "MoviesV1"
+				}
+			],
+			"sinks": [
+				{
+					"name": "MoviesClean"
+				}
+			],
+			"transformations": [
+				{
+					"name": "ExtractYearTile"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          movieId as string,",
+				"          title as string,",
+				"          genres as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> MoviesV1",
+				"MoviesV1 derive(year = toInteger(trim(right(title,6),'()')),",
+				"          title = toString(left(title,length(title)-6))) ~> ExtractYearTile",
+				"ExtractYearTile sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> MoviesClean"
+			]
+		}
+	}
+}
