@@ -9,7 +9,7 @@
 			"table_name": {
 				"type": "string"
 			},
-			"Schema_name": {
+			"SchemaName": {
 				"type": "string"
 			}
 		},
