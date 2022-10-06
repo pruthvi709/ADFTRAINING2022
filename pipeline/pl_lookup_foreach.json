@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from edw.information_schema.tables\nwhere table_type = 'BASE TABLE'",
+							"value": "SELECT * FROM edw.information_schema.TABLES WHERE TABLE_TYPE ='BASE TABLE'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
