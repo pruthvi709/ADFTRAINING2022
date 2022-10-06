@@ -7,7 +7,26 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Model",
+				"type": "varchar"
+			},
+			{
+				"name": "Length",
+				"type": "int",
+				"precision": 10
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "Cars"
