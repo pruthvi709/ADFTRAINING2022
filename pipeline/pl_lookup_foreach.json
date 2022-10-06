@@ -17,7 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from edw.information_schema.tables\nwhere table_type='base table';",
+						"sqlReaderQuery": {
+							"value": "select * from [dbo].[ExportedTables]",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
